@@ -1,0 +1,426 @@
+/* GLOBAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    background-color: #E4D8DC;
+    color: black;
+    height: 100%;
+}
+
+/*-- NAVBAR --*/
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+}
+
+.title {
+    font-size: 1.5rem;
+    margin: 20px;
+}
+
+.navbar-links ul {
+    display: flex;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    text-decoration: none;
+    color: white;
+    padding: 0.8rem;
+    display: block;
+    font-size: 1.1rem;
+    margin-right: 5px;
+}
+
+.navbar-links li:hover {
+    background-color: #555;
+}
+
+@media screen and (max-width: 950px) {
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+     }
+    
+     .navbar-links {
+        display: flex;
+        width: 100%;
+     }
+
+     .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+     }
+
+     .navbar-links li {
+        text-align: center;
+     }
+
+     .navbar-links li a {
+        padding: .5rem 1rem;
+     }
+
+     .navbar-links.active {
+         display: flex;
+     }
+}
+
+/*-- BANNER --*/
+
+.banner {
+    background-image: url(./Images/banner_img.jpg);
+    display: flex;
+    height: 600px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    opacity: 0.9;
+}
+
+.banner .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+}
+
+.content {
+    background-color: white;
+    z-index: 5;
+    opacity: 0.95;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.content h2 {
+    font-size: 2rem;
+    padding-bottom: 20px;
+    letter-spacing: .10rem;
+}
+
+.content h3 {
+    font-size: 1.5rem;
+}
+
+.button {
+    max-height: 2.5rem;
+    border: none;
+    border-radius: .25rem;
+    padding: .50rem 1.25rem;
+    font-family: inherit;
+    font-size: 1em;
+    font-weight: bold;
+    letter-spacing: .15rem;
+    color: white;
+    background-color: #30618C;
+    z-index: 9;
+    margin-top: 1.5rem;
+}
+
+@media screen and (max-width: 950px) {
+    .content h2 {
+        font-size: 1.5rem;
+        text-align: center;
+        letter-spacing: 0;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .content h3 {
+        font-size: 1.25rem;
+        text-align: center;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+
+/*-- EVENTS --*/
+
+.events {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    padding: 0 1rem;
+    margin: 3rem;
+}
+
+.events img {
+    width: 50%;
+}
+
+.events-content {
+    padding-top: .5em;
+    padding-bottom: 1em;
+    padding-right: 2em;
+}
+
+.events h2 {
+    font-size: 1.5rem;
+}
+
+p {
+    font-size: 1.1rem;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.event-list {
+    font-size: 1.1rem;
+    padding-top: 15px;
+    padding-bottom: 40px;
+    padding-left: 50px;
+}
+
+.meeting-info h2 {
+    padding-bottom: 1.2rem;
+}
+
+.meeting-info h3 {
+    padding-top: .25rem;
+    font-size: 1rem;
+}
+
+@media screen and (max-width: 950px) {
+
+    .events {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    
+    .meeting-info h3 {
+        padding-bottom: .25rem;
+    }
+
+    .events img {
+        width: 100%;
+        margin: auto;
+    }
+
+}
+
+.testimonial {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    height: 20rem;
+    background-color: #30618C;
+    color: whitesmoke;
+    padding: .75rem 2.5rem;
+}
+
+.testimonial h1, p {
+    font-size: 1.25rem;
+}
+
+@media screen and (max-width: 450px) {
+    
+    .testimonial h1, p {
+        font-size: 1rem;
+    }
+
+}
+
+/*-- TRAVEL --*/
+
+#travel {
+    margin: 4rem 2rem;
+}
+
+.travel-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    height: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.locations img {
+    height: auto;
+    width: auto;
+    padding: 2vw;
+}
+
+#travel h2 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.locations h3 {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+@media screen and (max-width: 475px) {
+
+    #travel h2 {
+        font-size: 1.5rem;
+    }
+
+    .locations h3 {
+        font-size: 1.2rem;
+    }
+}
+
+/*-- KDRAMAS --*/
+
+.kdrama-container {
+    display: block;
+    background-color: #30618C;
+}
+
+.kdrama-container img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    z-index: 5;
+}
+
+.kdrama-container h2 {
+    font-size: 2rem;
+    color: whitesmoke;
+    text-align: center;
+    padding-top: 1.5rem;
+}
+
+@media screen and (max-width: 475px) {
+
+    .kdrama-container h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/*-- KPOP --*/
+
+.kpop-container {
+    width: 80%;
+    margin: 4rem auto; 
+  }
+
+.kpop-container h2 {
+    font-size: 2rem;
+    text-align: center;
+    padding-bottom: 1.8rem;
+}
+  
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 5vw);
+    grid-gap: 1.25rem; 
+}
+  
+.gallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block; 
+}
+  
+.gallery-1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  
+    /* grid-column: 1 / span 2;
+     grid-row: 1 / span 2; */
+}
+  
+.gallery-2 {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  
+    /* grid-column: 3 / span 2;
+     grid-row: 1 / span 2; */
+}
+  
+.gallery-3 {
+    grid-column-start: 5;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 6;
+  
+    /* grid-column: 5 / span 4;
+    grid-row: 1 / span 5; */
+}
+  
+.gallery-4 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 6;
+  
+    /* grid-column: 1 / span 4; 
+     grid-row: 3 / span 3; */
+}
+  
+.gallery-5 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 6;
+    grid-row-end: 9;
+  
+    /* grid-column: 1 / span 4; 
+     grid-row: 6 / span 3; */
+}
+  
+.gallery-6 {
+    grid-column-start: 5;
+    grid-column-end: 9;
+    grid-row-start: 6;
+    grid-row-end: 9;
+  
+    /* grid-column: 5 / span 4; 
+     grid-row: 6 / span 3; */
+}
+
+@media screen and (max-width: 475px) {
+   
+    .kpop-container h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/*-- CONTACT --*/
+
+#contact {
+    margin: 4rem auto;
+    text-align: center;
+    font-size: 1.8vh;
+}
+
+#contact p {
+    font-size: 1.8vh;
+}
